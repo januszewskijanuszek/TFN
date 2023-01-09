@@ -2,7 +2,7 @@
 
 import React from "react";
 import {Outlet} from "react-router";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 export function Home(){
     return(
@@ -49,7 +49,7 @@ export function Contact(){
 
 export function Error(){
     return(
-        <div>NOT FOUND :(</div>
+        <div>NOT FOUND :( {useLocation().pathname}</div>
     )
 }
 
